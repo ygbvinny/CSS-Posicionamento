@@ -1,0 +1,125 @@
+        ****GRID****
+
+Com o 
+	display: grid;
+é possível definirmos colunas e linhas para organizarmos os elementos que estiverem dentro do grid.
+
+
+Com o
+	grid-template-columns:
+	
+Define o total de colunas e o tamanho de cada uma.
+
+
+Com o
+	fr:
+
+fr é uma unidade fracionária que terá como objetivo distribuir o espaço restante, entre os elementos do grid.
+
+
+Com o 
+	gap:
+
+Cria uma distância entre os elementos do grid, tanto horizontal quanto vertical. ( é tipo um padding, porem usado dentro do grid )
+
+
+
+	*****LEMBRETE*****
+
+	PRA ALINHAR O CONTEÚDO OU JUSTIFICAR ELE
+	ELE PRECISA TER UM TAMANHO/ESPAÇO PRA SER
+	ALINHADO/JUSTIFICADO, POIS POR AUTOMATICO
+	O GRID FICA COLADO NO CONTEUDO DA DIV
+	ENTÃO NÃO TEM ESPAÇO PRO CONTEUDO SER 			ALINHADO EM ALGUM CANTO DA TELA.
+
+
+
+Com o
+	align-content: ("alinhar conteúdo")
+
+Ele faz o alinhamento na vertical(em pé) Eu consigo alinhar o conteudo em colunas/de pé ao start/end/center/stretch/space-between/space-around/space-evenly
+
+
+Com o
+	justify-content:
+	
+Ele distribui o conteudo na horizontal
+eu consigo justificar aonde eu quero que o conteudo fique na horizontal, se vai ser do lado esquerdo/direito ou centro na horizontal.
+
+Pois geralmente as laterais tem espaço "sobrando"
+e da pra por em um lado especifico sem necessariamente
+aumentar o Height, mas caso eu queira alinhar na lateral, porem no final da tela, eu teria que por uma altura pra div, pra poder mover pra baixo e posicionar
+na parte de baixo.
+
+existe as opçoes de center/start e etc, porem tem uma adicional que é:
+	space-between/space-around/space-evenly
+
+Sendo a evenly uma das melhores opçoes pelo motivo dela separar espaços iguais de distancia da lateral de uma coluna pra outra.
+
+
+
+Com o
+	place-content:
+	
+Serve como um atalho para o uso de justify/aligh content.
+
+ai utilizo apenas o place-content e determino as duas coisas em apenas um lugar.
+
+Exemplo:
+	place-content: center end;
+	
+	
+	
+    ***** GRID COLUMN *****
+
+Com o
+	grid-column:
+Posiciona o item na coluna desejada.
+
+	1 / 3
+Da linha 1 até a linha 3.
+
+	1 / -1
+Da linha 1 até a última linha.
+
+	span 2
+Expandir por 2 colunas apartir de onde nasceu.
+
+
+
+***** ALIGN E JUSTIFY ITEMS *****
+
+serve pra centralizar o objeto a outros items, seja colar no top ou no centro, mas de qualquer forma alinhado ao o outro item maior lateral.
+
+	align-items:
+	justify-items:
+	place-items:
+	
+pra fazer isso a um item especifico dentro daquele grid, é necessario ir até a propriedade do item desejado e utilizar o self:
+
+	align / justify / place-self 
+	
+caso seja texto, utilizar o text-align.
+
+
+Para criar quantidades especificas de linhas no grid
+é preciso usar o
+
+	grid-template-rows:
+
+ai eu consigo atráves do repeat(2,400px) determinar quantas linhas eu quero e quantos px de tamanho elas vão ser.
+
+tbm da pra alinhar um item especifico em uma coluna ou linha especifica utilizando:
+
+	grid-column: coluna desejada
+	grid-row: linha desejada
+	grid-area: atalho para os dois
+	
+	
+Para evitar a confusão de codigo e manter uma ordem
+no grid, é interesssante organizar o html em ordem do que eu quero de prioridade, sendo assim evitando criar diversas linhas pra ajeitar um item em uma
+coluna especifica.
+
+exemplo: criar divs pra cada parte do conteudo,
+ou criar div pra auxiliar na ordem do grid, se eu quero que tais informaçoes fiquem em um lado especifico da tela, eu coloco elas em uma div e ai posso evitar a confusao de linhas.
+( div dentro de div )

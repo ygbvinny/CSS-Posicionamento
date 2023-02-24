@@ -1,0 +1,91 @@
+					***** FLEXBOX *****
+
+
+Por padrão, os elementos são blocos e pegam o tamanho de ponta a ponta da tela e não ficam um do lado do outro e sim um abaixo do outro por serem blocos.
+
+
+Pra ter um elemento ao lado do outro, é preciso colocar os elementos desejados como "flex".
+
+Exemplo:
+	display: flex;
+
+Fazendo isso, os elementos passam a ficar um do lado do outro, ai já abre a possibilidade de colocar margin de distancia de um pro outro e evitar que fiquem colados um ao outro.
+
+Usando o Margin ou Gap.
+
+
+Colocando como flex, o elemento passa a se adaptar.
+
+	Como assim?
+
+O Elemento passa a aumentar o tamanho do bloco pra adaptar o que tem dentro dele, criando margens de altura, quebrando o documento e quebrando o conteiner.
+
+	Como evitar que isso aconteça?
+	
+Utilizando o 
+	flex-warp: warp;	
+
+Fazendo isso, ele evita que o elemento quebre o container e deixa o conteudo "fixo" sem aumentar ou romper o tamanho do conteiner criando uma linha.
+
+
+Também é possivel alinhas o conteudo do flexbox da
+mesma forma do Grid, utilizando o
+
+	align-content: center/end/space-between etc
+
+
+
+					------- LEMBRETE -------
+
+LEMBRANDO QUE SÓ É POSSIVEL ALINHAR CONTEUDO SE TIVER
+ESPAÇO PRA ISSO
+
+
+
+Os filhos passam a ter um tamanho flexível e ficam um ao lado do outro.
+
+	display: flex;
+
+
+Caso não caiba todos os elementos em uma mesma linha, quebre para a próxima.
+
+	flex-wrap: wrap;
+
+
+Define uma distância entre os elementos.
+
+	gap:
+
+
+
+					***** FLEX GROW *****
+
+
+Se esse elemento deve crescer para ocupar o espaço vazio. O 0 impede o crescimento, valores maiores que 0 funcionam como a unidade fr do css grid.
+
+flex-grow: 1;
+
+
+Valor inicial antes de distribuir o espaço em branco.
+
+flex-basis: 200px;
+
+
+Caso exista um valor de base, o flex-shrink irá determinar se esse valor pode ser reduzido ou não. 0 significa que ele não pode ser reduzido.
+
+flex-shrink: 0;
+
+
+Atalho para flex-grow: 1; flex-shrink: 1; e flex-basis: 0;
+
+flex: 1;
+
+
+			QUAL A DIFERENÇA ENTRE FLEXBOX E GRID?
+			
+Use ambos no seu layout, eles resolvem problemas diferentes.
+
+O grid te dá controle em todos os eixos.
+
+Flexbox apenas no total de itens por linha.
+			
